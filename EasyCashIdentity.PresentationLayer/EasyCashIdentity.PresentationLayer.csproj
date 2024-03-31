@@ -54,6 +54,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyCashIdentity.DataLayer\EasyCashIdentity.DataAccesLayer.csproj" />
+    <ProjectReference Include="..\EasyCashIdentity.DTOLayer\EasyCashIdentity.DTOLayer.csproj" />
+    <ProjectReference Include="..\EasyCashIdentity.EntityLayer\EasyCashIdentity.EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>
