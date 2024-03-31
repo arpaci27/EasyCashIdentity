@@ -43,6 +43,9 @@ namespace EasyCashIdentity.DataAccesLayer.Repositories
 			context.SaveChanges();	
 		}
 
-		
+		T IGenericDal<T>.Delete(T t)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

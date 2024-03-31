@@ -1,29 +1,59 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
+    <None Include="wwwroot\web\about.html" />
+    <None Include="wwwroot\web\blog.html" />
+    <None Include="wwwroot\web\contact.html" />
+    <None Include="wwwroot\web\css\bootstrap.css" />
+    <None Include="wwwroot\web\css\font-awesome.css" />
+    <None Include="wwwroot\web\css\slider.css" />
+    <None Include="wwwroot\web\css\style.css" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\web\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\web\images\ab.jpg" />
+    <None Include="wwwroot\web\images\banner1.jpg" />
+    <None Include="wwwroot\web\images\banner2.jpg" />
+    <None Include="wwwroot\web\images\banner3.jpg" />
+    <None Include="wwwroot\web\images\blog1.jpg" />
+    <None Include="wwwroot\web\images\blog2.jpg" />
+    <None Include="wwwroot\web\images\blog3.jpg" />
+    <None Include="wwwroot\web\images\blog4.jpg" />
+    <None Include="wwwroot\web\images\blog5.jpg" />
+    <None Include="wwwroot\web\images\blog6.jpg" />
+    <None Include="wwwroot\web\images\skill1.jpg" />
+    <None Include="wwwroot\web\images\skill2.jpg" />
+    <None Include="wwwroot\web\images\t1.jpg" />
+    <None Include="wwwroot\web\images\t2.jpg" />
+    <None Include="wwwroot\web\images\t3.jpg" />
+    <None Include="wwwroot\web\images\t4.jpg" />
+    <None Include="wwwroot\web\images\te1.jpg" />
+    <None Include="wwwroot\web\images\te2.jpg" />
+    <None Include="wwwroot\web\index.html" />
+    <None Include="wwwroot\web\single.html" />
+    <None Include="wwwroot\web\w3layouts-license.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EasyCashIdentity.BusinessLayer\EasyCashIdentity.BusinessLayer.csproj" />
-    <ProjectReference Include="..\EasyCashIdentity.DataLayer\EasyCashIdentity.DataAccesLayer.csproj" />
-    <ProjectReference Include="..\EasyCashIdentity.EntityLayer\EasyCashIdentity.EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>
