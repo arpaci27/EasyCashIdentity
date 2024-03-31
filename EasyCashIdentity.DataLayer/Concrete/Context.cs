@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace EasyCashIdentity.DataAccessLayer.Concrete
 {
-	public class Context : IdentityDbContext
+	public class Context : IdentityDbContext<AppUser, AppRole, int>
 	{
 		public DbSet<CustomerAccount> CustomerAccounts { get; set; }
 		public DbSet<CustomerAccountProcess> CustomerAccountProcesses { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("server=ARPACI;initial catalog=EasyCashDB; integrated Security=true");
+			optionsBuilder.UseSqlServer("server=ARPACI;initial catalog=EasyCashLast; integrated Security=true");
 		}
 	}
 }
