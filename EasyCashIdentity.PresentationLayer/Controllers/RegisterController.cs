@@ -32,13 +32,22 @@ namespace EasyCashIdentity.PresentationLayer.Controllers
 					Name = appUserRegisterDto.Name,
 					Surname = appUserRegisterDto.Surname,
 					Email = appUserRegisterDto.Email,
-
+					City = "Omer",
+					District="dfdsf",
+					ImageUrl ="dffgfg"
 
 				};
 				var result = await _userManager.CreateAsync(appUser, appUserRegisterDto.Password);
 				if (result.Succeeded)
 				{
 					return RedirectToAction("Index", "ConfirmMail");
+				}
+				else
+				{
+					foreach(var item in result.Errors)
+					{
+						ModelState.AddModelError("", item.Description);
+					}
 				}
 			}
 			return View();
