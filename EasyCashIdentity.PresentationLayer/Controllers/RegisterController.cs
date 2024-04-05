@@ -43,6 +43,8 @@ namespace EasyCashIdentity.PresentationLayer.Controllers
 					ConfirmCode = code
 
 				};
+				MailAppPassword mailAppPassword = new MailAppPassword();
+				string password = mailAppPassword.mailAppPassword;
 				var result = await _userManager.CreateAsync(appUser, appUserRegisterDto.Password);
 				if (result.Succeeded)
 				{
@@ -63,7 +65,7 @@ namespace EasyCashIdentity.PresentationLayer.Controllers
 
 					SmtpClient client = new SmtpClient();
 					client.Connect("smtp.gmail.com",587,false);
-					client.Authenticate("ohaydar.arpaci@std.hku.edu.tr", "");
+					client.Authenticate("ohaydar.arpaci@std.hku.edu.tr", password);
 					client.Send(mimeMessage);
 					client.Disconnect(true);
 
