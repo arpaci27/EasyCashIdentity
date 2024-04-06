@@ -12,12 +12,13 @@ namespace EasyCashIdentity.DataAccessLayer.Concrete
 {
 	public class Context : IdentityDbContext<AppUser, AppRole, int>
 	{
-		public DbSet<CustomerAccount> CustomerAccounts { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("server=ARPACI;initial catalog=EasyCashLast; integrated Security=true");
+        }
+        public DbSet<CustomerAccount> CustomerAccounts { get; set; }
 		public DbSet<CustomerAccountProcess> CustomerAccountProcesses { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer("server=ARPACI;initial catalog=EasyCashLast; integrated Security=true");
-		}
+		
 	}
 }

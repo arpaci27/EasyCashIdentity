@@ -1,4 +1,4 @@
-﻿
+﻿@model ConfirmMailViewModel
 @{
     Layout=null;
     }
@@ -11,10 +11,10 @@
         <h2>Taşınan Mail Adresi: @ViewBag.v</h2>
         <br />
         <label>Kullanıcı ID Değeri: </label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" asp-for="Mail" value="@ViewBag.v" />
         <br />
         <label>Mail Adresinize gelen 6 haneli kodu giriniz: </label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" asp-for="ComfirmCode" />
         <br />
         <button class="btn btn-primary">Hesabı aktifleştir</button>
     </form>
