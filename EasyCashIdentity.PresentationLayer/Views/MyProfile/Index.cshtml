@@ -11,16 +11,12 @@
     <div class="container body">
         <div class="main_container">
             @await Component.InvokeAsync("_CustomerLayoutSidebarPartial")
-            <!-- top navigation -->
             @await Component.InvokeAsync("_CustomerLayoutNavbarPartial")
-            <!-- /top navigation -->
-            <!-- page content -->
             <div class="right_col" role="main">
-                <!-- top tiles -->
             <div class="">
                 <div class="page-title">
                     <div class="title-left">
-                        <h2>Selam</h2>
+                        <h2>@RenderBody()/h2>
                     </div>
                 </div>
             </div>
